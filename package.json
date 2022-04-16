@@ -1,6 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "build-all": "lerna run build --no-private --parallel",
+    "test-all": "lerna run test --no-private --parallel",
+    "docs": "npx typedoc --tsconfig ./packages/rmin/tsconfig.json --entryPoints ./packages/rmin/lib/main.ts --out ./docs",
+    "publish-all": "lerna publish",
+    "bootstrap": "lerna bootstrap"
+  },
   "devDependencies": {
     "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^27.4.1",
